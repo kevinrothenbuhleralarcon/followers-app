@@ -1,0 +1,12 @@
+<div *ngFor="let follower of followers" class="d-flex">
+    <div class="flex-shrink-0">
+        <img [src]="follower.avatar"/>
+    </div>
+
+    <div class="flex-grow-1 ms-3">
+      <h4>
+        <a [routerLink]="['/followers', follower.id, follower.username]">{{ follower.username }}</a>
+      </h4>
+      <a href="{{ follower.url }}">{{ follower.url }}</a>
+    </div>
+  </div>
